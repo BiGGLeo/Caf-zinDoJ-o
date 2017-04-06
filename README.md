@@ -9,7 +9,8 @@ Componentes: Leon Andrade Siqueira (20141011110352) João Mendes Lopes
 13 de Dezembro de 2009, Jeremy Ashkenas fez o primeiro commit Git do CoffeeScript.
 A regra de ouro do CoffeeScript é: “It’s just JavaScript”.
 Segundo o site dos desenvoldores, eles se focaram em reunir as melhores característica do JavaScript, para expor a capacidade dessa linguagem do modo mais simples possível, facilitando o aprendizado.
-Além do mais, é dito que o resultado compilado é legível, bem escrito e tende a rodar tão rápido quanto ou até mais rápido do que o JavaScript bruto.
+Além do mais, é dito que o resultado compilado é legível, bem escrito e tende a rodar tão rápido quanto ou até mais rápido do que o JavaScript bruto. CoffeeScript é uma linguagem multiparadigma: imperativa, baseada em protótipos, funcional, script.
+
 
 ## Instalação e Uso ##
 
