@@ -2,7 +2,7 @@
 
 <hr>
 
-# O que é?
+## O que é? ##
 
 <i> A regra de ouro do CoffeeScript é: “It’s just JavaScript” </i>
 
