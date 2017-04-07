@@ -1,4 +1,7 @@
-Componentes: Leon Andrade Siqueira (20141011110352) João Mendes Lopes
+Componentes:
+Leon Andrade Siqueira (20141011110352) <i>BiGGLeo</i> 
+João Mendes Lopes Neto (20141011110018) <i>joamendesln</i>
+Gabriel Cardoso Melita (20141011110263) <i>Não possui github</i>
 
 # CoffeeScript
 
