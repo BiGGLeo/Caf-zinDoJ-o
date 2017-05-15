@@ -52,3 +52,37 @@ Olá, mundo!
 
 
 Divirta-se!
+
+## Sintaxe OO ##
+
+O CoffeeScript conta com uma sintaxe OO própria, diferentemente do JavaScript, que utiliza de vários artifício dentro da linguagem, tais como a utilização de funções ou variáveis populadas por outras variáveis e funções, atuando respectivamente como objetos e métodos. Veja um pouco do funcionamento dessa sintaxe:
+
+Criando classe:
+~~~
+class Animal
+~~~
+Instanciando classe :
+~~~
+animal = new Animal
+~~~
+
+Criando construtor:
+
+Com um único objeto
+~~~
+class Animal
+  constructor: (name) ->
+    @name = name
+~~~
+Com mais de um objeto
+~~~
+class Person
+  constructor: (options) ->
+    {@name, @age, @height = 'average'} = options
+~~~
+Perceba que é definida previamente o valor de um objeto height como average.
+
+
+
+
+
