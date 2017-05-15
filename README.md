@@ -58,9 +58,8 @@ Divirta-se!
 
 O CoffeeScript visa, entre outras coisas, tornar o código menor e mais legível, tornando, por consequência, a sintaxe mais simples e clara para os usuários, como é possível ver a seguir:
 
-### Variáveis e Constantes###
+### Variáveis e Constantes ###
 
-#### Variáveis ####
 
 CoffeeScript
 ~~~~
@@ -118,7 +117,7 @@ else
   
 comando if condição 
 
-switch variavei
+switch variavel
   when comparacao comando
   else comando
 ~~~~
@@ -133,7 +132,7 @@ else{
 	comando
 }
 
-switch (variavei) {
+switch (variavel) {
     case comparacao:
       comando
       break;
@@ -141,6 +140,36 @@ switch (variavei) {
       comando
   }
 ~~~~
+
+### Estruturas de repetição ###
+A maioria dos laços (loops) que você escreverá em CoffeeScript serão compreensões de listas (list comprehensions) em arrays, objetos, e intervalos (ranges).
+
+CoffeeScript
+~~~~
+console.log(variavel); for variavel in listaPercorrida
+
+console.log(variavel); for variavel in listaPercorrida when condicao
+
+comando while condicao
+~~~~
+
+JavaScript
+~~~~
+var j, k;
+
+for (j = 0, len = listaPercorrida.length; j < len; j++) {
+      console.log(variavel);
+      
+for (k = 0, len = listaPercorrida.length; k < len; k++) {
+      if (condicao){
+      	console.log(variavel);      
+      }
+      
+while (condicao) {
+    comando
+  }
+~~~~
+
 ## Sintaxe OO ##
 
 O CoffeeScript conta com uma sintaxe OO própria, diferentemente do JavaScript, que utiliza de vários artifício dentro da linguagem, tais como a utilização de funções ou variáveis populadas por outras variáveis e funções, atuando respectivamente como objetos e métodos. Veja um pouco do funcionamento dessa sintaxe:
