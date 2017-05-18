@@ -143,7 +143,7 @@ A declaração de funções é dada por nomeDaFuncao(atributos) -> comandos reto
 ~~~~
 produto = (a) -> 
 	console.log "Produto por 2: "
-	a + a + x
+	a * 2
 ~~~~
 Nesse caso, o retorno da função "produto é dada por'
 
@@ -201,7 +201,6 @@ class Animal
   constructor: (@name) ->
 
 class Snake extends Animal
-    super 5 PESQUISAR
 ~~~~
 
 ### Polomorfismo ###
