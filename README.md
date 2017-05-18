@@ -102,7 +102,16 @@ a || b
 ~~~~
 
 ### Operadores Aritméticos ###
-Os operadores aritméticos do CoffeeScript seguem todos a mesma sintaxe do Javascript
+Os operadores aritméticos do CoffeeScript seguem todos a mesma sintaxe do Javascript:
+~~~~
+a + b
+a - b
+a * b
+a / b
+a % b
+a++
+a--
+~~~~
 
 ### Estruturas de Controle Condicional ###
 
@@ -276,9 +285,11 @@ A captura e lançamento dos erros encontrados no CoffeeScript são manipulados p
 ~~~~
 try
   x = y+20
-  console.log "The value of x is :" +x
+  console.log "O valor de x é:" +x
 catch e 
 	console.log "undefined" if e instanceof ReferenceError
 
 	console.log "Tipo de erro: " + e.stack
+finally
+  console.log "Declaração de fim"
 ~~~~
