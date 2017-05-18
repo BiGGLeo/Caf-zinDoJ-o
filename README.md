@@ -172,33 +172,91 @@ while (condicao) {
 
 ## Sintaxe OO ##
 
-O CoffeeScript conta com uma sintaxe OO própria, diferentemente do JavaScript, que utiliza de vários artifício dentro da linguagem, tais como a utilização de funções ou variáveis populadas por outras variáveis e funções, atuando respectivamente como objetos e métodos. Veja um pouco do funcionamento dessa sintaxe:
+O CoffeeScript conta com uma sintaxe OO própria, diferentemente do JavaScript, que utiliza de protótipos dentro da linguagem, tais como a utilização de funções ou variáveis populadas por outras variáveis e funções, atuando respectivamente como objetos e métodos. Veja um pouco do funcionamento dessa sintaxe:
 
-Criando classe:
+### Classe: ###
 ~~~
 class Animal
 ~~~
-Instanciando classe :
-~~~
+
+### Objeto ###
+
+O instaciamento dos objetos pode ser feito baseado nas carecterísticas de uma classe ou atributos e métodos próprios
+
+~~~~
 animal = new Animal
-~~~
 
-Criando construtor:
 
-Com um único objeto
-~~~
+math =
+  root:   Math.sqrt
+  cube:   (x) -> x * square x
+~~~~
+
+### Atributos e Construtores ###
+
+No primeiro caso do exemplo anterior, o instaciamento dos atributos são feitos concomitantemente a suas incializações realizadas nos construtores.
+
+~~~~
+class nomeClasse
+  constructor: (@atributo1, @atributo2) ->
+~~~~
+
+### Métodos ###
+
+Já os métodos são declarados independentes dentro da classe, sempre respeitando o tabulamento
+
+~~~~
+class nomeClasse
+  constructor: (@atributo1, @atributo2) ->
+
+  metodo: (atributoMetodo) ->
+    comandos
+~~~~
+
+### Herança ###
+
+A herança é um conceito também presente no CoffeScript. Para uma classe herdar atributos de uma classe pai é só declarar a classe e adicionar "extends + classePai"
+
+~~~~
 class Animal
-  constructor: (name) ->
-    @name = name
-~~~
-Com mais de um objeto
-~~~
-class Person
-  constructor: (options) ->
-    {@name, @age, @height = 'average'} = options
-~~~
-Perceba que é definida previamente o valor de um objeto height como average.
+  constructor: (@name) ->
 
+class Snake extends Animal
+    super 5 PESQUISAR
+~~~~
+
+### Polomorfismo ###
+
+O polimorfismo é uma característica inerenta ao CoffeScript. Sua realização é dada somente pela criação de métodos herdados da super-classe, mas diferenciado de classe herdada para classe.
+
+~~~~
+class Animal
+  constructor: (@name) ->
+
+  move: (meters) ->
+    console.log @name + " moved #{meters}m."
+
+class Snake extends Animal
+  move: ->
+    console.log "Slithering..."
+    super 5
+
+class Horse extends Animal
+  move: ->
+    console.log "Galloping..."
+    super 45
+~~~~
+
+### Sobrecarga ###
+
+O artifício da sobrecarga faz-se presente no CoffeeScript também.
+
+~~~~
+soma1 = (a) -> 
+	a + a
+
+soma2 = (a) -> a + a + a
+~~~~
 
 
 
