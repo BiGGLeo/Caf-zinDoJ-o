@@ -60,22 +60,12 @@ O CoffeeScript visa, entre outras coisas, tornar o código menor e mais legível
 
 ### Variáveis e Constantes ###
 
-
-CoffeeScript
 ~~~~
 number = 10
-number = 5.5
-~~~~
-
-JavaScript
-~~~~
-var number = 10
-var number = 5.5
 ~~~~
 
 ### Operadores relacionais e lógicos ###
 
-CoffeeScript
 ~~~~
 a is b
 a isnt b
@@ -88,18 +78,6 @@ a and b
 a or b
 ~~~~
 
-JavaScript
-~~~~
-a === b
-a !== b
-a < b
-a > b
-a <= b
-a >= b
-!condicao
-a && b
-a || b
-~~~~
 
 ### Operadores Aritméticos ###
 Os operadores aritméticos do CoffeeScript seguem todos a mesma sintaxe do Javascript:
@@ -116,7 +94,6 @@ a--
 ### Estruturas de Controle Condicional ###
 
 Nestes tópicos, é importante considerar a importância da tabulação na sintaxe do CoffeeScript, como será visto a seguir:
-CoffeeScript
 ~~~~
 if condição
 	comando
@@ -131,59 +108,52 @@ switch variavel
   else comando
 ~~~~
 
-Javascript
-~~~~
-if (condição){
-	comandos
-}
-
-else{
-	comando
-}
-
-switch (variavel) {
-    case comparacao:
-      comando
-      break;
-    default:
-      comando
-  }
-~~~~
-
 ### Estruturas de repetição ###
-A maioria dos laços (loops) que você escreverá em CoffeeScript serão compreensões de listas (list comprehensions) em arrays, objetos, e intervalos (ranges).
+A maioria dos laços (loops) que você escreverá em CoffeeScript serão compreensões de listas (list comprehensions) em arrays, objetos, e intervalos. Caso se queira fazer um loop com uma quantidade de fixa de iterações sem ser necessário criar uma lista, é só usar o array [1..x], que criará uma repetição crescente a qual acontecerá x vezzes.
 
-CoffeeScript
 ~~~~
-console.log(variavel); for variavel in listaPercorrida
+console.log variavel ; for variavel in listaPercorrida
 
-console.log(variavel); for variavel in listaPercorrida when condicao
+console.log variavel; for variavel in listaPercorrida when condicao
+
+console.log num for num in [1..10]
+
+for num in [1..10]
+	console.log "Iteração: " + i
+	console.log num
 
 comando while condicao
+
 ~~~~
 
-JavaScript
-~~~~
-var j, k;
+### Vetores, matrizes e strings ###
 
-for (j = 0, len = listaPercorrida.length; j < len; j++) {
-      console.log(variavel);
-      
-for (k = 0, len = listaPercorrida.length; k < len; k++) {
-      if (condicao){
-      	console.log(variavel);      
-      }
-      
-while (condicao) {
-    comando
-  }
 ~~~~
+string = "Oi";
+
+song = ["do", "re", "mi", "fa", "so"]
+
+matriz = [[1, 2], [3, 4]]
+~~~~
+
+
+### Funções ###
+
+A declaração de funções é dada por nomeDaFuncao(atributos) -> comandos retorno. O código a seguir exemplifica essa sintaxe:
+~~~~
+produto = (a) -> 
+	console.log "Produto por 2: "
+	a + a + x
+~~~~
+Nesse caso, o retorno da função "produto é dada por'
+
+
 
 ## Sintaxe OO ##
 
 O CoffeeScript conta com uma sintaxe OO própria, diferentemente do JavaScript, que utiliza de protótipos dentro da linguagem, tais como a utilização de funções ou variáveis populadas por outras variáveis e funções, atuando respectivamente como objetos e métodos. Veja um pouco do funcionamento dessa sintaxe:
 
-### Classe: ###
+### Classe ###
 ~~~
 class Animal
 ~~~
@@ -248,24 +218,14 @@ class Animal
 class Snake extends Animal
   move: ->
     console.log "Slithering..."
-    super 5
 
 class Horse extends Animal
   move: ->
     console.log "Galloping..."
-    super 45
 ~~~~
 
 ### Sobrecarga ###
 
-O artifício da sobrecarga faz-se presente no CoffeeScript também.
-
-~~~~
-soma1 = (a) -> 
-	a + a
-
-soma2 = (a) -> a + a + a
-~~~~
 
 ## Tratamento de exceções ##
 
