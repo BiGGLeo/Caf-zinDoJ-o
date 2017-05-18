@@ -258,6 +258,29 @@ soma1 = (a) ->
 soma2 = (a) -> a + a + a
 ~~~~
 
+## Tratamento de exceções ##
 
+### Categorias de exceções ###
 
+O CoffeeScript é uma linguagem estática, tendo os seus erros detectados antes da compilação. O tratamento de erros é feito por meio do objeto da classe error. Alguns dos tipos de erros que podem ser replicados são:
 
+<b>TypeError</b>
+explicação
+<b>RangeError</b>
+explicação
+<b>EvalError</b>
+explicação
+<b>ReferenceError</b>
+explicação
+
+### Captura e lançamento de exceções ###
+
+A captura e lançamento dos erros encontrados no CoffeeScript são manipulados por meio da cláusala try...catch, como estruturado no exemplo a seguir
+
+~~~~
+try
+  x = y+20
+  console.log "The value of x is :" +x
+catch e 
+	console.log "undefined" if e instanceof ReferenceError
+~~~~
