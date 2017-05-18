@@ -264,14 +264,10 @@ soma2 = (a) -> a + a + a
 
 O CoffeeScript é uma linguagem estática, tendo os seus erros detectados antes da compilação. O tratamento de erros é feito por meio do objeto da classe error. Alguns dos tipos de erros que podem ser replicados são:
 
-<b>TypeError</b>
-explicação
-<b>RangeError</b>
-explicação
-<b>EvalError</b>
-explicação
-<b>ReferenceError</b>
-explicação
+<b>TypeError</b> <br>
+<b>RangeError</b> <br>
+<b>EvalError</b> <br>
+<b>ReferenceError</b> <br>
 
 ### Captura e lançamento de exceções ###
 
@@ -283,4 +279,6 @@ try
   console.log "The value of x is :" +x
 catch e 
 	console.log "undefined" if e instanceof ReferenceError
+
+	console.log "Tipo de erro: " + e.stack
 ~~~~
