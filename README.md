@@ -9,7 +9,7 @@ Gabriel Cardoso Melita (20141011110263) <i>gcmelita</i> <br>
 
 ## Resumo ##
 
-13 de Dezembro de 2009, Jeremy Ashkenas fez o primeiro commit Git do CoffeeScript.
+13 de Dezembro de 2009, Jeremy Ashkenas fez o primeiro commit Git do CoffeeScript, linguagem desenvolvida por Brendan Eich no ano de 1995.
 A regra de ouro do CoffeeScript é: “It’s just JavaScript”.
 Segundo o site dos desenvoldores, eles se focaram em reunir as melhores característica do JavaScript, para expor a capacidade dessa linguagem do modo mais simples possível, facilitando o aprendizado.
 Além do mais, é dito que o resultado compilado é legível, bem escrito e tende a rodar tão rápido quanto ou até mais rápido do que o JavaScript bruto, já que muitos caracteres na programação são poupados como chaves e parênteses. CoffeeScript é uma linguagem multiparadigma: imperativa, baseada em protótipos, funcional, script.
@@ -109,7 +109,7 @@ switch variavel
 ~~~~
 
 ### Estruturas de repetição ###
-A maioria dos laços (loops) que você escreverá em CoffeeScript serão compreensões de listas (list comprehensions) em arrays, objetos, e intervalos. Caso se queira fazer um loop com uma quantidade de fixa de iterações sem ser necessário criar uma lista, é só usar o array [1..x], que criará uma repetição crescente a qual acontecerá x vezzes.
+A maioria dos laços (loops) que você escreverá em CoffeeScript serão compreensões de listas (list comprehensions) em arrays, objetos, e intervalos. Caso se queira fazer um loop com uma quantidade de fixa de iterações sem ser necessário criar uma lista, é só usar o array [1..x], que criará uma repetição crescente a qual acontecerá x vezzes. A seguir alguns exemplos dosnlaços existentes no coffeeScript:
 
 ~~~~
 console.log variavel ; for variavel in listaPercorrida
@@ -128,12 +128,20 @@ comando while condicao
 
 ### Vetores, matrizes e strings ###
 
+No coffeeScript, a declaração de vetores, matrizes e strings é bastante parecida com a do javaScript:
 ~~~~
 string = "Oi";
 
-song = ["do", "re", "mi", "fa", "so"]
+song = ["do", "re", "mi", "fa", "sol"]
 
 matriz = [[1, 2], [3, 4]]
+~~~~
+
+Para inserir elementos no vetor, usa-se a mesma função, push:
+~~~~
+song.push "lá"
+
+matriz [6, 7]
 ~~~~
 
 
@@ -225,6 +233,15 @@ class Horse extends Animal
 
 ### Sobrecarga ###
 
+Não há uma artifício nativo para fazer a sobrecarga de métodos no CoffeScript. No entanto, criou-se um artifício que exerce o mesmo papel do overload:
+
+~~~~
+funcaoSobrecarga = ->
+  do switch arguments.length
+    when 1 then (a) -> 'um atributo'
+    when 2 then (a, b) -> 'dois atributos'
+    else (a...) -> 'muitos atributos'
+~~~~
 
 ## Tratamento de exceções ##
 
